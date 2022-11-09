@@ -1,13 +1,12 @@
 html {
     box-sizing: border-box;
-    background: #ffc600;
     font-family: 'Fjalla One', sans-serif;
     font-size: 20px;
-    /* font-weight: 200; */
+    font-weight: 200;
 }
 
 body {
-    margin: 0;
+        margin: 0;
 }
 
 *, *:before, *:after {
@@ -21,7 +20,6 @@ body {
 }
 
 .panel {
-    background: #6B0F9C;
     box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
     color: white;
     text-align: center;
@@ -29,17 +27,17 @@ body {
     /* Safari transitionend event.propertyName === flex */
     /* Chrome + FF transitionend event.propertyName === flex-grow */
     transition:
-    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
-    flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
-    background 0.2s;
+        font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        flex 0.9s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        background 0.2s;
     font-size: 20px;
     background-size: cover;
     background-position: center;
     flex: 1;
     justify-content: center;
-    align-items: center;
     display: flex;
     flex-direction: column;
+    height: 100vh;
 }
 
 .panel1 { background-image:url(/images/services.jpg); }
@@ -48,33 +46,22 @@ body {
 .panel4 { background-image:url(/images/discog.jpg); }
 .panel5 { background-image:url(/images/contact.jpg); }
 
-/* Flex Children */
+/* Flex Items */
 .panel > * {
     margin: 0;
     width: 100%;
+    height: 33%;
     transition: transform 0.5s;
-    border: 1px solid red;
     flex: 1 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.panel > *:first-child {
-    transform: translateY(-100%);
-}
-
-.panel.open-active > *:first-child {
-    transform: translateY(0%);
-}
-
-.panel > *:last-child {
-    transform: translateY(100%);
-}
-
-.panel.open-active > *:last-child {
-    transform: translateY(0%);
-}
+.panel > *:first-child { transform: translateY(-300%); }
+.panel.open-active > *:first-child { transform: translateY(0); }
+.panel > *:last-child { transform: translateY(300%); }
+.panel.open-active > *:last-child { transform: translateY(0); }
 
 .panel p {
     text-transform: uppercase;
@@ -83,11 +70,78 @@ body {
 }
 
 .panel p:nth-child(2) {
-    font-size: 4em;
+    font-size: 2.5em;
 }
 
 .panel.open {
     flex: 5;
-    font-size: 40px;
+    font-size: 1.5em;
 }
 
+@media only screen and (max-width: 600px) {
+.panel p {
+    font-size: 1em;
+}
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    background-color: rgb(78, 78, 78);
+    opacity: 95%;
+    margin: 10px 10px;
+    border-radius: 10px;
+    width: 45%;
+    height: 80%;
+    padding: 10px;
+    border: rgb(214, 214, 214) solid 2px;
+}
+
+.gear {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    background-color: rgb(78, 78, 78);
+    opacity: 95%;
+    margin: 10px 10px;
+    border-radius: 10px;
+    width: 90%;
+    height: 80%;
+    padding: 10px;
+    border: rgb(214, 214, 214) solid 2px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: rgb(214, 53, 53);
+}
+
+.records {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    background-color: rgb(78, 78, 78);
+    opacity: 95%;
+    margin: 10px 10px;
+    border-radius: 10px;
+    width: 90%;
+    height: 80%;
+    padding: 10px;
+    border: rgb(214, 214, 214) solid 2px;
+}
+
+.album-covers {
+    max-width: 100%;
+    max-height: 65%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.record-cover {
+    max-width: 30%;
+}
