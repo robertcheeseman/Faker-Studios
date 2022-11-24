@@ -1,7 +1,7 @@
 html {
     box-sizing: border-box;
     font-family: 'Fjalla One', sans-serif;
-    background: #232526;  /* fallback for old browsers */
+    background: #101212;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
@@ -106,7 +106,7 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 10px;
-    background-color: rgb(78, 78, 78);
+    background-color: rgb(98, 98, 98);
     opacity: 95%;
     margin: 10px 10px;
     border-radius: 10px;
